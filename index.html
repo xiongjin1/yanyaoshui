@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0f5968">
+  <meta name="description" content="全飞秒术后每日滴眼药安排与 iPhone 日历提醒">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./images/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>滴眼药助手</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="logo" aria-hidden="true">💧</span><div><small>全飞秒术后</small><h1>滴眼药助手</h1></div></div>
+      <span class="day-badge" id="dayBadge"></span>
+    </header>
+
+    <nav class="date-nav" aria-label="选择日期">
+      <button id="previousDay" aria-label="前一天">‹</button>
+      <button id="todayButton" class="date-label"><strong id="dateTitle"></strong><span id="dateSubtitle"></span></button>
+      <button id="nextDay" aria-label="后一天">›</button>
+    </nav>
+
+    <section class="hero">
+      <div><p id="heroDate"></p><h2 id="nextDose">正在计算…</h2><span id="nextDetail"></span></div>
+      <div class="progress" aria-live="polite"><strong id="progressCount">0/0</strong><small>已完成</small></div>
+    </section>
+
+    <div id="alerts"></div>
+
+    <section aria-labelledby="planTitle">
+      <div class="section-title"><h2 id="planTitle">当日安排</h2><span id="planHint">双眼各 1 滴 · 相隔 5 分钟</span></div>
+      <div id="schedule"></div>
+      <button class="text-button" id="clearDone" hidden>↻ 清除当日勾选</button>
+    </section>
+
+    <section class="card calendar-card">
+      <h2>📅 iPhone 闹钟提醒</h2>
+      <p>导入系统日历后，网页关闭也会按时提醒具体药名。</p>
+      <a class="primary-button" href="./reminders.ics" download="滴眼药提醒.ics">添加全部提醒到日历</a>
+      <details><summary>iPhone 导入方法</summary><p>点上面的按钮，在预览页选择“添加全部”；若进入“下载”，请在 Safari 下载列表中打开该文件。</p></details>
+    </section>
+
+    <details class="card notes">
+      <summary>ℹ️ 教材依据与重要说明</summary>
+      <p><strong>可乐必妥：</strong>每天 4 次，教材写明“用完即止”，所以未再列入当前计划。</p>
+      <p><strong>思然：</strong>用完后改为玻璃酸钠，每天 4 次、一天 1 支、单支有效 24 小时，总共使用 3 个月。</p>
+      <p><strong>露达舒：</strong>术后第 4 天开始，3 次/日 × 10 天、2 次/日 × 10 天、1 次/日 × 10 天。</p>
+      <p><strong>环孢素：</strong>早晚各 1 次，共 2 个月。<strong>速高捷：</strong>术后一周开始，睡前 1 次，共 3 周。</p>
+      <p>不同眼药没有固定先后顺序，至少间隔 5 分钟；点药前洗手，每只眼 1 滴，点后闭眼 10 秒。</p>
+    </details>
+
+    <aside class="warning">⚠️ 个人用药可能与教材不同，应以医生要求为准。出现异常请及时联系屈光手术中心或眼科急诊。</aside>
+
+    <footer>
+      <a href="tel:02885422536">☎️ 联系华西</a>
+      <details><summary>➕ 安装到主屏幕</summary><p>用 Safari 打开本页 → 点“分享” → 选择“添加到主屏幕”。</p></details>
+      <small>手术日 2026-08-17 · 用药第 1 天 2026-08-18<br>完成记录只保存在本机</small>
+    </footer>
+  </main>
+
+  <dialog id="medicineDialog"><button id="closeDialog" aria-label="关闭">×</button><img id="largeImage" alt=""><strong id="largeImageName"></strong></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
