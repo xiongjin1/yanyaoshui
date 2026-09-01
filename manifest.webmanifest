@@ -1,0 +1,1 @@
+{"name":"滴眼药助手","short_name":"滴眼药","description":"全飞秒术后每日用药时间表与提醒","start_url":"./","scope":"./","display":"standalone","background_color":"#edf7f8","theme_color":"#0f5968","lang":"zh-CN","icons":[{"src":"./images/icon-192.png","sizes":"192x192","type":"image/png"},{"src":"./images/icon-512.png","sizes":"512x512","type":"image/png"}]}
