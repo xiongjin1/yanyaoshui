@@ -1,0 +1,16 @@
+.alert.replacement {
+  border-color: #7dd3c7;
+  background: #e9fffb;
+  color: #164e48;
+}
+
+.replacement-button {
+  display: block;
+  margin-top: 9px;
+  border: 0;
+  border-radius: 10px;
+  background: #0f766e;
+  color: white;
+  padding: 8px 13px;
+  font-weight: 700;
+}
