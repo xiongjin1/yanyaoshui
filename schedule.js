@@ -16,7 +16,7 @@ export function scheduleForDate(date){
   else if(range(date,'2026-09-10','2026-09-19'))add('露达舒','露达舒','早','双眼各 1 滴；使用前摇匀','lotemax.png');
   if(range(date,'2026-08-18','2026-10-17'))for(const slot of ['早','晚'])add('环孢素','环孢素滴眼液',slot,'双眼各 1 滴；当天 1 支','cyclosporine.png');
   if(range(date,'2026-08-18','2026-09-06'))for(const slot of ['早','晚'])add('贝特舒','贝特舒',slot,'双眼各 1 滴；教材只明确“使用 ≥20 天”','betoptic.png');
-  if(range(date,'2026-08-24','2026-09-13'))add('速高捷','速高捷眼用凝胶','睡前','双眼使用；每周用完 1 支','sinuojie.png');
+  if(range(date,'2026-08-25','2026-09-14'))add('速高捷','速高捷眼用凝胶','睡前','双眼使用；每周用完 1 支','sinuojie.png');
   return doses.sort((a,b)=>base[a.slot]-base[b.slot]||order.indexOf(a.shortName)-order.indexOf(b.shortName)).map((dose,index,all)=>{
     const minutes=base[dose.slot]+all.slice(0,index).filter(item=>item.slot===dose.slot).length*5;
     const time=`${String(Math.floor(minutes/60)).padStart(2,'0')}:${String(minutes%60).padStart(2,'0')}`;
